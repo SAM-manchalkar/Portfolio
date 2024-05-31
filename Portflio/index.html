@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio  - Sneha Manchalkar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="logo.jpeg" alt="" class="logo">
+            <ul style="list-style-type:disc;">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-text">
+        <p>Developer</p>
+        <h1>Hi, I'm <span style="color: #ff004f;">Sneha Manchalkar,</span><br> From Maharashtra, India</h1>
+       </div>
+    </div>
+</div>
+
+
+<!--------------------------------------- About ----------------------------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="pic.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p class="description">Hello folks...! Myself Sneha an enthusiastic engineering student pursuing my bachelor's in engineering (IT dept) at BVCOEW, Pune. Talking about my interest, I have a keen interest in web development (both frontend and backend), cloud computing, AI & ML, and data science are some of my areas of interests. lets, connect with each other and share some knowledge.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming Languages</span><br>Java |  C |  Python(Basic) |</li>
+                        <li><span>Web Technologies  </span><br>HTML | CSS | Bootstrap | JavaScript | MERN(Basic) |</li>
+                        <li><span>Databases</span><br>MySQL | MongoDB | (AWS Cloud) |</li>
+                        <li><span>Core Subjects</span><br>Data Structures and Algorithms | Operating Systems | Database Management | </li> 
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2024</span><br>Bharati Vidyapeeths College of Engineering for Women<br>Bachelor of Engineering in Information Technology | [CGPA : 8.3/10]</li>
+                        <li><span>2020</span><br>Shree Bhairavanath Jr. College Pune <br>HSC (State Board) with [Score : 80.31%]</li>
+                        <li><span>2018</span><br>Shree Bhairavanath High School Pune <br>SSC (State Board) with [Score : 92.40%]</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>Oct 2022-April 2023</span><br>Python Developer Intern | Passion Infotech Pvt Ltd, Pune</li>
+                        <li><span>Sep 2022 - present</span><br>Developer | Technaut BVCOEW, Pune</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------------projects----------------->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="projects-list">
+            <div>
+                <h2>Python Developer Intern, <br><span style="color: #b54769; font-size: 18px;">(OpenCV, Python)</span></h2>
+                <p>
+                ~ Face detection project implemented in Python using OpenCV. <br>
+                ~ Input: Image file. <br>
+                ~ Output: Count of faces detected in the input image.
+                </p>
+            </div>
+            <div>
+                <h2>Pharmacy Store management System, <br><span style="color: #b54769; font-size: 18px;">(MongoDB, Java, NetBeans)</span></h2>
+                <p>
+                ~ Java-based platform with a simple User Interface for functionalities like registration, contact details management, sign-in, and medicine ordering. <br>
+                ~ Backend manipulation implemented using MongoDB database. <br>
+                ~ Development carried out in NetBeans IDE for Java.
+                    </p>
+            </div>
+            <div>
+                <h2>Calculator, <br><span style="color: #b54769; font-size: 18px;">(HTML, CSS, JavaScript)</span></h2>
+                <p>
+                ~ Created Simple Calculater which can do basic arthematic operations, such as addition, subtraction, multiplication and division. <br>
+                ~ Here I used HTML, CSS and JavaScript  
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <script>
+
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+             for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+    </script>
+</body>
+</html>
